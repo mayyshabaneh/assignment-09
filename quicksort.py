@@ -4,13 +4,13 @@ class sorting:
         mid = arr[(len(arr)-1) // 2 ]
         right = arr[len(arr)-1]
 
-    def quick_sort (self,arr,start,end):
+    def quick_sort (self,arr,start,end): #nlogn
         if start < end :
             part_index = self.partiotion(arr,start,end)
             self.quick_sort(arr,start,part_index-1)
             self.quick_sort(arr,part_index+1,end)
 
-    def partiotion(self,arr,start,end):
+    def partiotion(self,arr,start,end):#o(n)
         pivot = arr[end ]
         i = start-1
         for j in range (start,end):
